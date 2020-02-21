@@ -68,7 +68,7 @@ module RGeo
         if input.is_a?(String)
           input = JSON.parse(input)
         end
-        return unless input.is_a?(Hash)
+        return unless input.is_a?(Hash) || input.is_a?(ActionController::Parameters)
 
         case input["type"]
         when "FeatureCollection"
